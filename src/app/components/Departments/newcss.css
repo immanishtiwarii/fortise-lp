@@ -1,0 +1,295 @@
+/* DepartmentsCarousel.css */
+.departments-carousel-section {
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.dept-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.dept-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.dept-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a3b5c;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.dept-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #25d366, #128c7e);
+  border-radius: 2px;
+}
+
+.dept-subtitle {
+  font-size: 1.1rem;
+  color: #4a5568;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.dept-carousel-wrapper {
+  position: relative;
+  padding: 0 40px;
+}
+
+.dept-swiper {
+  padding: 30px 10px;
+}
+
+.dept-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.dept-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #25d366, #128c7e);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.dept-card:hover::before {
+  transform: scaleX(1);
+}
+
+.dept-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.dept-icon-wrapper {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dept-icon-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #e2ffef 0%, #c5f5dd 100%);
+  border-radius: 50%;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.dept-card:hover .dept-icon-bg {
+  transform: scale(1.1);
+}
+
+.dept-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.dept-card:hover .dept-icon {
+  transform: scale(1.1);
+}
+
+.dept-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a3b5c;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.dept-card:hover .dept-name {
+  color: #128c7e;
+}
+
+.dept-hover-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: white;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  border-top: 1px solid #f1f5f9;
+}
+
+.dept-card:hover .dept-hover-content {
+  transform: translateY(0);
+}
+
+.dept-description {
+  color: #4a5568;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.dept-explore-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(90deg, #25d366, #128c7e);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.dept-explore-btn:hover {
+  background: linear-gradient(90deg, #128c7e, #0a6c5c);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(18, 140, 126, 0.3);
+}
+
+.dept-swiper-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 2rem;
+}
+
+.dept-swiper-button-prev,
+.dept-swiper-button-next {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #25d366;
+}
+
+.dept-swiper-button-prev:hover,
+.dept-swiper-button-next:hover {
+  background: #25d366;
+  color: white;
+  border-color: #25d366;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dept-view-all {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.dept-view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: #25d366;
+  border: 2px solid #25d366;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dept-view-all-btn:hover {
+  background: #25d366;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .dept-title {
+    font-size: 2rem;
+  }
+
+  .dept-carousel-wrapper {
+    padding: 0 20px;
+  }
+
+  .dept-card {
+    height: 280px;
+    padding: 1.5rem 1rem;
+  }
+
+  .dept-icon-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+
+  .dept-icon {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .departments-carousel-section {
+    padding: 3rem 0;
+  }
+
+  .dept-title {
+    font-size: 1.75rem;
+  }
+
+  .dept-subtitle {
+    font-size: 1rem;
+  }
+
+  .dept-swiper-controls {
+    margin-top: 1.5rem;
+  }
+
+  .dept-swiper-button-prev,
+  .dept-swiper-button-next {
+    width: 45px;
+    height: 45px;
+  }
+}

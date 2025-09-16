@@ -1,0 +1,170 @@
+/* DepartmentsCarousel.css */
+.dept-section {
+  padding: 4rem 0;
+}
+
+.dept-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.dept-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.dept-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0CA854;
+  margin-bottom: 1rem;
+}
+
+.dept-subtitle {
+  font-size: 1.1rem;
+  color: #4a5568;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.dept-carousel-wrapper {
+  position: relative;
+}
+
+.dept-swiper {
+  padding: 10px 5px 40px;
+}
+
+.dept-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.dept-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.dept-icon-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+  background: #f0fdf4;
+}
+
+.dept-icon {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.dept-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a3b5c;
+  line-height: 1.4;
+}
+
+.dept-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 1.5rem;
+}
+
+.dept-prev,
+.dept-next {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #25d366;
+  transition: all 0.2s ease;
+}
+
+.dept-prev:hover,
+.dept-next:hover {
+  background: #25d366;
+  color: white;
+  border-color: #25d366;
+}
+
+/* Swiper custom styles */
+.dept-swiper .swiper-button-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.dept-swiper .swiper-button-disabled:hover {
+  background: white;
+  color: #25d366;
+  border-color: #e2e8f0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .dept-section {
+    padding: 3rem 0;
+  }
+
+  .dept-title {
+    font-size: 1.8rem;
+  }
+
+  .dept-subtitle {
+    font-size: 1rem;
+  }
+
+  .dept-card {
+    padding: 1.2rem;
+    height: auto;
+  }
+
+  .dept-icon-container {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1rem;
+  }
+
+  .dept-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .dept-name {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dept-title {
+    font-size: 1.6rem;
+  }
+
+  .dept-navigation {
+    margin-top: 1rem;
+  }
+
+  .dept-prev,
+  .dept-next {
+    width: 40px;
+    height: 40px;
+  }
+}

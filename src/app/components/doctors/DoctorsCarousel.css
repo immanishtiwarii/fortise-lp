@@ -1,0 +1,250 @@
+/* DoctorsCarousel.css */
+.doctors-carousel-section {
+  padding: 5rem 0;
+  background: linear-gradient(
+    180deg,
+    #e2ffef 0%,
+    rgba(244, 247, 255, 0.4) 100%
+  );
+}
+
+.doctors-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.doctors-section-title {
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #0CA854;
+  margin-bottom: 1rem;
+}
+
+.doctors-section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.doctors-swiper {
+  padding: 20px 10px 60px;
+}
+
+.doctor-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.doctor-image-container {
+  position: relative;
+  /* height: 280px; */
+  height: 200px;
+  overflow: hidden;
+  /* border-radius: 30%; */
+}
+
+.doctor-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.doctor-card:hover .doctor-image {
+  transform: scale(1.05);
+}
+
+.doctor-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.doctor-card:hover .doctor-overlay {
+  opacity: 1;
+}
+
+.view-profile-btn {
+  background: white;
+  color: #0f766e;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-profile-btn:hover {
+  background: #0f766e;
+  color: white;
+}
+
+.doctor-info {
+  padding: 1.5rem;
+}
+
+.doctor-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.doctor-specialty {
+  color: #0CA854;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.doctor-hospital {
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.doctor-experience {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.doctor-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.chat-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #0ca854;
+  color: #fff;
+  border: 1px solid #0ca854;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.chat-btn:hover {
+  background: #fff;
+  color: #0ca854;
+}
+
+.contact-btn {
+  background: white;
+  color: #0f766e;
+  border: 1px solid #0f766e;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.contact-btn:hover {
+  background: #0f766e;
+  color: white;
+}
+
+/* Swiper custom styles */
+.doctors-swiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: white;
+  opacity: 1;
+}
+
+.doctors-swiper .swiper-pagination-bullet-active {
+  background: red;
+}
+
+/* .doctors-swiper .swiper-button-next,
+.doctors-swiper .swiper-button-prev {
+  color: #0f766e;
+  background: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.doctors-swiper .swiper-button-next:after,
+.doctors-swiper .swiper-button-prev:after {
+  font-size: 1.2rem;
+  font-weight: bold;
+} */
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .doctors-section-title {
+    font-size: 2rem;
+  }
+
+  .doctor-image-container {
+    height: 240px;
+  }
+
+  .doctor-info {
+    padding: 1.25rem;
+  }
+
+  .doctor-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .chat-btn,
+  .contact-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .doctors-carousel-section {
+    padding: 3rem 0;
+  }
+
+  .doctors-section-title {
+    font-size: 1.75rem;
+  }
+
+  .doctors-section-subtitle {
+    font-size: 1rem;
+  }
+
+  .doctor-image-container {
+    height: 200px;
+  }
+}

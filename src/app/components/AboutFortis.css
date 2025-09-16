@@ -1,0 +1,279 @@
+/* AboutFortis.css */
+.about-fortis-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.af-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.af-content {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.af-text {
+  flex: 1.5;
+}
+
+.af-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0ca854;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.af-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background-color: #0ca854;
+  border-radius: 2px;
+}
+
+.af-description {
+  font-size: 1.05rem;
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.af-highlights {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.af-stat {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.af-stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0ca854;
+  margin-bottom: 0.5rem;
+}
+
+.af-stat-label {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.af-services {
+  margin: 2.5rem 0;
+}
+
+.af-services-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+.af-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.af-service-item {
+  background: rgba(12, 168, 84, 0.1);
+  color: #0a8e46;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.af-service-item:hover {
+  background: #0ca854;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.af-fitsib {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin: 2.5rem 0;
+}
+
+.af-fitsib-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+.af-fitsib-description {
+  font-size: 1.05rem;
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.af-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.af-btn-primary {
+  background: #0ca854;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(12, 168, 84, 0.4);
+}
+
+.af-btn-primary:hover {
+  background: #0a8e46;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(12, 168, 84, 0.5);
+}
+
+.af-btn-secondary {
+  background: transparent;
+  color: #0ca854;
+  border: 2px solid #0ca854;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.af-btn-secondary:hover {
+  background: #0ca854;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.af-image {
+  flex: 1;
+  position: relative;
+}
+
+.af-main-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.af-accreditations {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.af-accreditation-item {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+.af-accreditation-icon {
+  width: 24px;
+  height: 24px;
+  color: #0ca854;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .af-content {
+    gap: 3rem;
+  }
+
+  .af-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .af-content {
+    flex-direction: column;
+  }
+
+  .af-title {
+    font-size: 2rem;
+  }
+
+  .af-highlights {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .af-actions {
+    flex-direction: column;
+  }
+
+  .af-accreditations {
+    position: relative;
+    bottom: 0;
+    margin-top: 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .af-accreditation-item {
+    width: fit-content;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-fortis-section {
+    padding: 3rem 0;
+  }
+
+  .af-title {
+    font-size: 1.8rem;
+  }
+
+  .af-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .af-stat-number {
+    font-size: 1.5rem;
+  }
+
+  .af-main-image {
+    height: 350px;
+  }
+}
