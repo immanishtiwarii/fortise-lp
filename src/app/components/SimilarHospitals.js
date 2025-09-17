@@ -1,16 +1,18 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./SimilarHospitals.css";
+import PopupForm from "./popupform/PopupForm";
 
 const SimilarHospitals = () => {
+  const [showForm, setShowForm] = useState(false);
   const hospitals = [
     {
       id: 1,
-      name: "Fortis Escorts Heart Institute",
+      name: "Fortis Escorts Heart Institute, New Delhi",
       address:
         "Metro Station, Okhla Rd, opposite Sukhdev Vihar, Sarai Jullena, New Friends Colony, New Delhi, Delhi 110025",
       image:
@@ -19,36 +21,37 @@ const SimilarHospitals = () => {
     },
     {
       id: 2,
-      name: "Fortis Memorial Research Institute",
-      address: "Sector 44, Opposite HUDA City Centre, Gurugram, Haryana 122002",
+      name: "Fortis Hospital, Noida",
+      address:
+        "B-22, Rasoolpur Nawada, D Block, Sector 62, Noida, Uttar Pradesh 201301",
       image:
-        "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhvc3BpdGFsJTIwYnVpbGRpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+        "https://content3.jdmagicbox.com/comp/noida/v2/011pxx11.xx11.091209143629.e1v2/catalogue/fortis-hospital-noida-noida-sector-62-noida-hospitals-4pe50.jpg",
       specialty: "Multi-Specialty Hospital",
     },
     {
       id: 3,
-      name: "Fortis Hospital, Noida",
-      address: "B-22, Sector 62, Noida, Uttar Pradesh 201301",
+      name: "Fortis Hospital, Shalimar Bagh, New Delhi",
+      address:
+        "A Block, Shaheed Udham Singh Marg, Poorbi Shalimar Bag, Shalimar Bagh New Delhi, 110088",
       image:
-        "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhvc3BpdGFsJTIwYnVpbGRpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+        "https://content.jdmagicbox.com/v2/comp/delhi/y4/011pxx11.xx11.090408114842.k2y4/catalogue/fortis-hospital-shalimar-bagh-delhi-hospitals-n8heo19zl4.jpg",
       specialty: "Multi-Specialty Hospital",
     },
     {
       id: 4,
-      name: "Fortis Hospital, Kolkata",
+      name: "Fortis Hospital Vasant Kunj, New Delhi",
       address:
-        "730, Eastern Metropolitan Bypass, Anandapur, Kolkata, West Bengal 700107",
+        "Aruna Asaf Ali Marg, Pocket 1, Sector B, Vasant Kunj, New Delhi, Delhi 110070",
       image:
-        "https://images.unsplash.com/photo-1599045118108-bf9954418b76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGhvc3BpdGFsJTIwYnVpbGRpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+        "https://rawahealth.com/wp-content/uploads/2023/08/299362167_392402426406876_8632148723512692852_n.jpg",
       specialty: "Multi-Specialty Hospital",
     },
     {
       id: 5,
-      name: "Fortis Hospital, Mumbai",
-      address:
-        "Mulund - Goregaon Link Rd, Nahur West, Industrial Area, Bhandup West, Mumbai, Maharashtra 400078",
+      name: "Fortis Memorial Research Institute, Gurgaon",
+      address: "Sector - 44, Opposite HUDA City Centre Gurgaon, 122002",
       image:
-        "https://images.unsplash.com/photo-1584467735871-8b9ec6d5d637?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhvc3BpdGFsJTIwYnVpbGRpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
+        "https://static.hospidio.com/uploads/hospital/57/fortis-hospital-gurugram.jpg.webp",
       specialty: "Multi-Specialty Hospital",
     },
   ];
@@ -66,17 +69,17 @@ const SimilarHospitals = () => {
 
         <div className="sh-carousel-wrapper">
           <Swiper
-            modules={[Navigation, Autoplay]}
+            modules={[Navigation]}
             slidesPerView={1}
             spaceBetween={20}
             navigation={{
               nextEl: ".sh-next",
               prevEl: ".sh-prev",
             }}
-            autoplay={{
-              delay: 4000,
-              disableOnInteraction: false,
-            }}
+            // autoplay={{
+            //   delay: 4000,
+            //   disableOnInteraction: false,
+            // }}
             breakpoints={{
               640: {
                 slidesPerView: 2,
@@ -120,7 +123,10 @@ const SimilarHospitals = () => {
                         WhatsApp
                       </a>
 
-                      <button className="sh-contact-btn">
+                      <button
+                        className="sh-contact-btn"
+                        onClick={() => setShowForm(true)}
+                      >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
@@ -175,6 +181,7 @@ const SimilarHospitals = () => {
           </div>
         </div>
       </div>
+      <PopupForm isOpen={showForm} onClose={() => setShowForm(false)} />
     </section>
   );
 };

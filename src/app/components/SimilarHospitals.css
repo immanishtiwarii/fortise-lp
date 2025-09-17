@@ -1,7 +1,8 @@
 /* SimilarHospitals.css */
 .similar-hospitals-section {
-  padding: 4rem 0;
+  /* padding: 4rem 0; */
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  padding-bottom: 1rem;
 }
 
 .sh-container {
@@ -95,6 +96,7 @@
   color: #1a3b5c;
   margin-bottom: 0.75rem;
   line-height: 1.4;
+  height: 50px;
 }
 
 .sh-address {
@@ -103,6 +105,7 @@
   line-height: 1.5;
   margin-bottom: 1.5rem;
   flex-grow: 1;
+  height: 58px;
 }
 
 .sh-actions {
@@ -229,6 +232,12 @@
   .sh-content {
     padding: 1.25rem;
   }
+  .sh-name {
+    height: auto;
+  }
+  .sh-address {
+    height: auto;
+  }
 }
 
 @media (max-width: 480px) {
@@ -238,6 +247,12 @@
 
   .sh-navigation {
     margin-top: 1rem;
+  }
+  .sh-name {
+    height: auto;
+  }
+  .sh-address {
+    height: auto;
   }
 
   .sh-prev,

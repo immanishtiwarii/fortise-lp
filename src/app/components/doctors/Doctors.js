@@ -2,6 +2,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import ButtonPopup from "../popupform/ButtonPopup";
 
 const Doctors = () => {
   return (
@@ -96,15 +97,7 @@ const Doctors = () => {
                       </p>
 
                       <div className="HospitalCard_buttonContainer__PVQ9v">
-                        <button
-                          className="HospitalCard_contactButton__kPFpe"
-                          style={{
-                            color: "#0CA854",
-                            borderColor: "#0CA854",
-                          }}
-                        >
-                          Contact Doctor
-                        </button>
+                        <ButtonPopup className="HospitalCard_contactButton__kPFpe" />
                       </div>
                     </SwiperSlide>
                   ))}

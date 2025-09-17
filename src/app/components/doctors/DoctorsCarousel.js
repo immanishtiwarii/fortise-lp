@@ -1,13 +1,16 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 // import "swiper/css/pagination";
 // import "swiper/css/navigation";
 import "./DoctorsCarousel.css";
+import ButtonPopup from "../popupform/ButtonPopup";
+import PopupForm from "../popupform/PopupForm";
 
 const DoctorsCarousel = () => {
+  const [showForm, setShowForm] = useState(false);
   const doctors = [
     {
       id: 10,
@@ -160,7 +163,12 @@ const DoctorsCarousel = () => {
                       <span>Chat</span>
                     </button>
 
-                    <button className="contact-btn">Contact Doctor</button>
+                    <button
+                      className="contact-btn"
+                      onClick={() => setShowForm(true)}
+                    >
+                      Contact Doctor
+                    </button>
                   </div>
                 </div>
               </div>
@@ -168,6 +176,7 @@ const DoctorsCarousel = () => {
           ))}
         </Swiper>
       </div>
+      <PopupForm isOpen={showForm} onClose={() => setShowForm(false)} />
     </section>
   );
 };

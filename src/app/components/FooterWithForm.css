@@ -1,0 +1,47 @@
+.footer-section {
+  background: linear-gradient(
+    180deg,
+    #e2ffef 0%,
+    rgba(244, 247, 255, 0.4) 100%
+  );
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-heading {
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.footer-form input,
+.footer-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.footer-form textarea {
+  resize: vertical;
+}
+
+.footer-submit-btn {
+  background-color: #0ca854;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
