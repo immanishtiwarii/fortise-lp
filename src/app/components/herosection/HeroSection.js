@@ -27,7 +27,7 @@ const HeroSection = () => {
                     alt="Medical treatment image"
                     loading="lazy"
                     decoding="async"
-                    src="https://ortil.com/lp/img/fortis-banner.webp"
+                    src="/banner.webp"
                     className="HeroSection_mainImage__wfw_A"
                     style={{
                       position: "absolute",
