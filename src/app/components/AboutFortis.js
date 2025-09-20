@@ -93,7 +93,7 @@ const AboutFortis = () => {
 
           <div className="af-image">
             <img
-              src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhvc3BpdGFsJTIwYnVpbGRpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+              src="/image/fortis.webp"
               alt="Fortis Hospital"
               className="af-main-image"
             />

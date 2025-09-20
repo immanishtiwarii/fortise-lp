@@ -113,7 +113,7 @@ const InternationalPatientServices = () => {
 
           <div className="ips-image">
             <img
-              src="https://d34iaq2x6tdl4r.cloudfront.net/public/Fitsib_Marketing/doctor-team.png"
+              src="/image/doctor-team.png"
               alt="Doctor and patient"
               className="ips-main-image"
             />

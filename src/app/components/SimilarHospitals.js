@@ -15,8 +15,7 @@ const SimilarHospitals = () => {
       name: "Fortis Escorts Heart Institute, New Delhi",
       address:
         "Metro Station, Okhla Rd, opposite Sukhdev Vihar, Sarai Jullena, New Friends Colony, New Delhi, Delhi 110025",
-      image:
-        "https://d34iaq2x6tdl4r.cloudfront.net/thumbnail_fortis_escorts_aa7ace0ac3_3e1a5d7b87_fb28a4a726.webp",
+      image: "/image/hospital/Escort.jpg",
       specialty: "Cardiology & Cardiac Surgery",
     },
     {
@@ -24,8 +23,7 @@ const SimilarHospitals = () => {
       name: "Fortis Hospital, Noida",
       address:
         "B-22, Rasoolpur Nawada, D Block, Sector 62, Noida, Uttar Pradesh 201301",
-      image:
-        "https://content3.jdmagicbox.com/comp/noida/v2/011pxx11.xx11.091209143629.e1v2/catalogue/fortis-hospital-noida-noida-sector-62-noida-hospitals-4pe50.jpg",
+      image: "/image/hospital/noida.avif",
       specialty: "Multi-Specialty Hospital",
     },
     {
@@ -33,8 +31,7 @@ const SimilarHospitals = () => {
       name: "Fortis Hospital, Shalimar Bagh, New Delhi",
       address:
         "A Block, Shaheed Udham Singh Marg, Poorbi Shalimar Bag, Shalimar Bagh New Delhi, 110088",
-      image:
-        "https://content.jdmagicbox.com/v2/comp/delhi/y4/011pxx11.xx11.090408114842.k2y4/catalogue/fortis-hospital-shalimar-bagh-delhi-hospitals-n8heo19zl4.jpg",
+      image: "/image/hospital/shalimar.avif",
       specialty: "Multi-Specialty Hospital",
     },
     {
@@ -42,16 +39,14 @@ const SimilarHospitals = () => {
       name: "Fortis Hospital Vasant Kunj, New Delhi",
       address:
         "Aruna Asaf Ali Marg, Pocket 1, Sector B, Vasant Kunj, New Delhi, Delhi 110070",
-      image:
-        "https://rawahealth.com/wp-content/uploads/2023/08/299362167_392402426406876_8632148723512692852_n.jpg",
+      image: "/image/hospital/vasant-kunj.jpg",
       specialty: "Multi-Specialty Hospital",
     },
     {
       id: 5,
       name: "Fortis Memorial Research Institute, Gurgaon",
       address: "Sector - 44, Opposite HUDA City Centre Gurgaon, 122002",
-      image:
-        "https://static.hospidio.com/uploads/hospital/57/fortis-hospital-gurugram.jpg.webp",
+      image: "/image/hospital/gurugram.webp",
       specialty: "Multi-Specialty Hospital",
     },
   ];

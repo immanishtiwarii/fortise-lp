@@ -11,57 +11,57 @@ const DepartmentsCarousel = () => {
     {
       id: 1,
       name: "Cardiology & Cardiac Surgery",
-      icon: "https://d34iaq2x6tdl4r.cloudfront.net/Cardiology_b53152fe08_c1b4b80700_bd8a9a3942_c44f70caa6.webp",
+      icon: "/image/dep/1.webp",
     },
     {
       id: 2,
       name: "Gastroenterology",
-      icon: "https://d34iaq2x6tdl4r.cloudfront.net/Gastroentrology_1c2189dde8_8f5335208e_fbdf5457e4_e74a5c9268.webp",
+      icon: "/image/dep/2.webp",
     },
     {
       id: 3,
       name: "Hepatology",
-      icon: "https://mm-fitsib.s3.ap-south-1.amazonaws.com/Group_1171276067_2a5bbc7358.svg",
+      icon: "/image/dep/3.svg",
     },
     {
       id: 4,
       name: "IVF",
-      icon: "https://d34iaq2x6tdl4r.cloudfront.net/ivf_aa300785f0_fdfd29a039_a5733a2f93_a79d0e3d7d.webp",
+      icon: "/image/dep/4.webp",
     },
     {
       id: 5,
       name: "Nephrology",
-      icon: "https://d34iaq2x6tdl4r.cloudfront.net/Nephrology_2b232f4aef_fb15f003fc_9318950394.webp",
+      icon: "/image/dep/5.webp",
     },
     {
       id: 6,
       name: "Neurology & Neurosurgery",
-      icon: "https://d34iaq2x6tdl4r.cloudfront.net/Neurology_and_Neurosurgery_ae946f6e00_06a56b1edd_edcd3fa652.webp",
+      icon: "/image/dep/6.webp",
     },
     {
       id: 7,
       name: "Oncology",
-      icon: "https://d34iaq2x6tdl4r.cloudfront.net/Oncology_8222b6952c_8388e08f14_104fd2bc44.webp",
+      icon: "/image/dep/7.webp",
     },
     {
       id: 8,
       name: "Orthopedics",
-      icon: "https://d34iaq2x6tdl4r.cloudfront.net/Property_1_Orthopedic_dd6e47cd10_1029372e56.webp",
+      icon: "/image/dep/8.webp",
     },
     {
       id: 10,
       name: "Spine Surgery",
-      icon: "https://d34iaq2x6tdl4r.cloudfront.net/Property_1_Neuro_9ab671f60e_2eb42e557a.webp",
+      icon: "/image/dep/9.webp",
     },
     {
       id: 11,
       name: "Transplant Surgery",
-      icon: "https://d34iaq2x6tdl4r.cloudfront.net/Transplant_Surgery_62414adcba_aeb90d6d42_e138a92f19.webp",
+      icon: "/image/dep/10.webp",
     },
     {
       id: 12,
       name: "Urology",
-      icon: "https://mm-fitsib.s3.ap-south-1.amazonaws.com/Urology_00d17db874_36169a6b9f.webp",
+      icon: "/image/dep/11.webp",
     },
   ];
 

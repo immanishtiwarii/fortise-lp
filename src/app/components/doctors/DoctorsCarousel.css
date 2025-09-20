@@ -18,7 +18,7 @@
   text-align: center;
   font-size: 2.1rem;
   font-weight: 700;
-  color: #0CA854;
+  color: #0ca854;
   margin-bottom: 1rem;
 }
 
@@ -115,7 +115,7 @@
 }
 
 .doctor-specialty {
-  color: #0CA854;
+  color: #0ca854;
   font-weight: 600;
   margin-bottom: 0.5rem;
   font-size: 0.85rem;
@@ -125,6 +125,7 @@
   color: #4b5563;
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
+  height: 36px;
 }
 
 .doctor-experience {
@@ -215,6 +216,10 @@
     height: 240px;
   }
 
+  .doctors-swiper {
+    padding: 20px 10px 0px;
+  }
+
   .doctor-info {
     padding: 1.25rem;
   }
@@ -233,7 +238,7 @@
 
 @media (max-width: 480px) {
   .doctors-carousel-section {
-    padding: 3rem 0;
+    padding-top: 2rem;
   }
 
   .doctors-section-title {
@@ -246,5 +251,8 @@
 
   .doctor-image-container {
     height: 200px;
+  }
+  .doctor-hospital {
+    height: auto;
   }
 }

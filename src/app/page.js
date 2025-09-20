@@ -1,6 +1,5 @@
 import AboutFortis from "./components/AboutFortis";
 import DepartmentsCarousel from "./components/Departments/DepartmentsCarousel";
-import Doctors from "./components/doctors/Doctors";
 import DoctorsCarousel from "./components/doctors/DoctorsCarousel";
 import FAQSection from "./components/FAQSection";
 import Footer from "./components/Footer";

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Award = () => {
   return (
@@ -8,13 +9,13 @@ const Award = () => {
           <div className="HeroSection_statsTop__Ra4B6">
             {/* Stat Item 1 - Hospitals */}
             <div className="HeroSection_statItem__ma_la">
-              <img
+              <Image
                 alt="Hospital Icon"
                 loading="lazy"
                 width="64"
                 height="64"
                 decoding="async"
-                src="https://d34iaq2x6tdl4r.cloudfront.net/public/Fitsib_Marketing/hospital-icon.svg"
+                src="/image/hospital-icon.svg"
                 style={{ color: "transparent" }}
               />
               <div className="HeroSection_statContent__Rb2S1">
@@ -33,7 +34,7 @@ const Award = () => {
                 width="64"
                 height="64"
                 decoding="async"
-                src="https://d34iaq2x6tdl4r.cloudfront.net/public/Fitsib_Marketing/nabh.webp"
+                src="/image/nabh.webp"
                 style={{ color: "transparent" }}
               />
               <div className="HeroSection_statContent__Rb2S1">
@@ -53,7 +54,7 @@ const Award = () => {
               width="64"
               height="64"
               decoding="async"
-              src="https://d34iaq2x6tdl4r.cloudfront.net/public/Fitsib_Marketing/accreditations_83_png_fa11bb0938.webp"
+              src="/image/accreditation.webp"
               style={{ color: "transparent" }}
             />
             <div className="HeroSection_statContent__Rb2S1">
@@ -72,7 +73,7 @@ const Award = () => {
               width="120"
               height="40"
               decoding="async"
-              src="https://d34iaq2x6tdl4r.cloudfront.net/public/Fitsib_Marketing/thumbnail_google_logo_9a8f8d02be.webp"
+              src="/image/google.webp"
               style={{ color: "transparent" }}
             />
             <div className="HeroSection_stars__gIKyS">
@@ -84,7 +85,7 @@ const Award = () => {
                   width="16"
                   height="16"
                   decoding="async"
-                  src="https://d34iaq2x6tdl4r.cloudfront.net/public/Fitsib_Marketing/star.svg"
+                  src="/image/star.svg"
                   style={{ color: "transparent" }}
                 />
               ))}

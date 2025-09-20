@@ -15,8 +15,7 @@ const DoctorsCarousel = () => {
     {
       id: 10,
       name: "Dr. Ashok Seth",
-      image:
-        "https://www.fortishealthcare.com/drupal-data/doctors/dr-ashok-seth-3761.jpg",
+      image: "/image/doctor/dr-ashok-seth.webp",
       specialty: "Cardiac Surgeon",
       hospital: "Fortis Escorts Heart Insititute, New Delhi",
       experience: "35+ years of experience",
@@ -24,8 +23,7 @@ const DoctorsCarousel = () => {
     {
       id: 11,
       name: "Dr. (Col) Manjinder Sandhu",
-      image:
-        "https://www.fortishealthcare.com/drupal-data/doctors/dr-%28col%29-manjinder-sandhu-11494.png",
+      image: "/image/doctor/manjinder.webp",
       specialty: "Interventional Cardiologist",
       hospital: "Fortis Memorial Research Institute, Gurgaon",
       experience: "32+ years of experience",
@@ -33,8 +31,7 @@ const DoctorsCarousel = () => {
     {
       id: 12,
       name: "Dr. Dinesh Kumar Mittal",
-      image:
-        "https://www.fortishealthcare.com/drupal-data/doctors/dr-dinesh-kumar-mittal-2830.jpg",
+      image: "/image/doctor/dinesh.webp",
       specialty: "Cardiac Surgeon",
       hospital: "Fortis Hospital, Shalimar Bagh, New Delhi",
       experience: "31+ years of experience",
@@ -42,8 +39,7 @@ const DoctorsCarousel = () => {
     {
       id: 13,
       name: "Dr. Rahul Bhargava",
-      image:
-        "https://www.fortishealthcare.com/drupal-data/doctors/dr-rahul-bhargava-1909.jpg",
+      image: "/image/doctor/dr-rahul-bhargava-1909.webp",
       specialty: "Hematologist",
       hospital: "Fortis Memorial Research Institute, Gurgaon",
       experience: "24+ years of experience",
@@ -51,8 +47,7 @@ const DoctorsCarousel = () => {
     {
       id: 14,
       name: "Dr. Sandeep Vaishya",
-      image:
-        "https://www.fortishealthcare.com/drupal-data/doctors/dr-sandeep-vaishya-566.jpg",
+      image: "/image/doctor/dr-sandeep-vaishya-566.webp",
       specialty: "Neurosurgeon",
       hospital: "Fortis Memorial Research Institute, Gurgaon",
       experience: "37+ years of experience",
@@ -60,8 +55,7 @@ const DoctorsCarousel = () => {
     {
       id: 1,
       name: "Dr. Vivek Vij",
-      image:
-        "https://d34iaq2x6tdl4r.cloudfront.net/thumbnail_dr_vivek_vij_1016_d698ee2b19_eb80f00af9_32878b1435.webp",
+      image: "/image/doctor/vivek.webp",
       specialty: "Liver Transplant Specialist",
       hospital: "Fortis Hospital, Noida",
       experience: "28 years of experience",
@@ -69,8 +63,7 @@ const DoctorsCarousel = () => {
     {
       id: 2,
       name: "Dr. Vikas Dua",
-      image:
-        "https://d34iaq2x6tdl4r.cloudfront.net/thumbnail_dr_vikas_dua_75604e417d_226d1290d0_fd605fc9b0.webp",
+      image: "/image/doctor/vikash.webp",
       specialty: "Hematologist",
       hospital: "Fortis Hospital, Noida",
       experience: "15 years of experience",
@@ -78,8 +71,7 @@ const DoctorsCarousel = () => {
     {
       id: 3,
       name: "Dr. Vinod Raina",
-      image:
-        "https://d34iaq2x6tdl4r.cloudfront.net/thumbnail_Dr_Vinod_Raina_2a4fa065a3_5c183bc4e5.webp",
+      image: "/image/doctor/vinod.webp",
       specialty: "Medical Oncologist",
       hospital: "Fortis Memorial Research Institute, Gurgaon",
       experience: "51 years of experience",
@@ -87,8 +79,7 @@ const DoctorsCarousel = () => {
     {
       id: 4,
       name: "Dr. Manoj Miglani",
-      image:
-        "https://d34iaq2x6tdl4r.cloudfront.net/thumbnail_dr_manoj_miglani_best_orthopedist_fortis_hospital_delhi_ed6b081693_4a2a060842_ad637a98a4.webp",
+      image: "/image/doctor/manoj.webp",
       specialty: "Spine Surgeon",
       hospital: "Fortis Hospital, Vasant Kunj, New Delhi",
       experience: "28 years of experience",
