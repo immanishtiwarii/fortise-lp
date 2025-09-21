@@ -2,12 +2,12 @@
 import React, { useState } from "react";
 import PopupForm from "./PopupForm";
 
-const ButtonPopup = ({ className = "" }) => {
+const ButtonPopup = ({ className = "", titile = "" }) => {
   const [showForm, setShowForm] = useState(false);
   return (
     <>
       <button className={className} onClick={() => setShowForm(true)}>
-        Get Free Opinion
+        {titile}
       </button>
       <PopupForm isOpen={showForm} onClose={() => setShowForm(false)} />
     </>

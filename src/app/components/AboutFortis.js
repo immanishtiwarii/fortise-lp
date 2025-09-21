@@ -81,7 +81,10 @@ const AboutFortis = () => {
               </p>
             </div> */}
             <div className="af-actions">
-              <ButtonPopup className="ips-cta-button" />
+              <ButtonPopup
+                className="ips-cta-button"
+                titile="Get Free Opinion "
+              />
               {/* <button className="af-btn-primary">Get FREE Opinion</button> */}
               {/* <button className="af-btn-secondary">
                 Learn More About Our Services

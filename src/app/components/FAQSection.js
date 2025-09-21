@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import "./FAQSection.css";
+import ButtonPopup from "./popupform/ButtonPopup";
 
 const FAQSection = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -125,7 +126,9 @@ const FAQSection = () => {
                   </div>
                 </div> */}
               </div>
-              <button className="faq-contact-btn">
+
+              <ButtonPopup className="ips-cta-button" titile="Contact Us" />
+              {/* <button className="faq-contact-btn">
                 Contact Us
                 <svg
                   width="16"
@@ -142,7 +145,7 @@ const FAQSection = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

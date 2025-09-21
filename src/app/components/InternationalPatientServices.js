@@ -92,7 +92,10 @@ const InternationalPatientServices = () => {
               ))}
             </div>
 
-            <ButtonPopup className="ips-cta-button" />
+            <ButtonPopup
+              className="ips-cta-button"
+              titile="Get Free Opinion "
+            />
             {/* 
             <button className="ips-cta-button">
               Get Free Opinion
