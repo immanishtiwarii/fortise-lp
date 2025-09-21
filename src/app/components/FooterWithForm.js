@@ -83,9 +83,6 @@ const FooterWithForm = () => {
           },
         }
       );
-
-      console.log("Response:", response.data);
-
       alert("Form submitted successfully!");
 
       // Reset form if needed
@@ -102,17 +99,16 @@ const FooterWithForm = () => {
       console.error("Error submitting form:", error);
 
       if (error.response) {
-        // Server responded with a status code other than 2xx
         alert(
           "Submission failed: " + error.response.data.message ||
             "Please try again."
         );
       } else {
-        // Network error or something else
         alert("Something went wrong. Please try again later.");
       }
     }
   };
+
   return (
     <>
       <footer className="footer-section">

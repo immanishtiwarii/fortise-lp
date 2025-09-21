@@ -72,15 +72,18 @@ const Form = () => {
       return;
     }
 
+    const datatosend = {
+      name: formData?.name,
+      email: formData?.email,
+      phone: formData?.phonecode + formData?.phone,
+      country: formData?.country,
+      message: formData?.description,
+    };
+
     try {
       const response = await axios.post(
-        "https://your-api-endpoint.com/form",
-        formData,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
+        "https://crmbackend-6wur.onrender.com/api/createlead",
+        datatosend
       );
 
       console.log("Response:", response.data);
