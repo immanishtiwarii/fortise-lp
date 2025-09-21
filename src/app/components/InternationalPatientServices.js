@@ -1,5 +1,6 @@
 import React from "react";
 import "./InternationalPatientServices.css";
+import ButtonPopup from "./popupform/ButtonPopup";
 
 const InternationalPatientServices = () => {
   const services = [
@@ -91,8 +92,10 @@ const InternationalPatientServices = () => {
               ))}
             </div>
 
+            <ButtonPopup className="ips-cta-button" />
+            {/* 
             <button className="ips-cta-button">
-              Get Started Today
+              Get Free Opinion
               <svg
                 width="16"
                 height="16"
@@ -108,7 +111,7 @@ const InternationalPatientServices = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-            </button>
+            </button> */}
           </div>
 
           <div className="ips-image">

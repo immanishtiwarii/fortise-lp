@@ -2,6 +2,7 @@
 import React, { useMemo, useState } from "react";
 import { countries } from "./CountryList";
 import Select from "react-select";
+import axios from "axios";
 
 const Form = () => {
   const [errors, setErrors] = useState({});
@@ -72,35 +73,43 @@ const Form = () => {
     }
 
     try {
-      const response = await fetch("https://your-api-endpoint.com/form", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+      const response = await axios.post(
+        "https://your-api-endpoint.com/form",
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      console.log("Response:", response.data);
+
+      alert("Form submitted successfully!");
+
+      // Reset form if needed
+      setFormData({
+        name: "",
+        email: "",
+        country: "",
+        phonecode: "",
+        phone: "",
+        description: "",
+        age: "",
       });
-
-      const data = await response.json();
-      console.log("Response:", data);
-
-      if (response.ok) {
-        alert("Form submitted successfully!");
-        // Reset form if needed
-        setFormData({
-          name: "",
-          email: "",
-          country: "",
-          phonecode: "",
-          phone: "",
-          description: "",
-          age: "",
-        });
-      } else {
-        alert("Submission failed. Please try again.");
-      }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("Something went wrong.");
+
+      if (error.response) {
+        // Server responded with a status code other than 2xx
+        alert(
+          "Submission failed: " + error.response.data.message ||
+            "Please try again."
+        );
+      } else {
+        // Network error or something else
+        alert("Something went wrong. Please try again later.");
+      }
     }
   };
 
@@ -141,6 +150,7 @@ const Form = () => {
               value={formData.email}
               onChange={handleChange}
             />
+            {errors.email && <span className="error-text">{errors.email}</span>}
           </div>
 
           <Select
@@ -149,6 +159,9 @@ const Form = () => {
             onChange={handleCountryChange}
             placeholder="Select Your Country..."
           />
+          {errors.country && (
+            <span className="error-text">{errors.countrye}</span>
+          )}
 
           <div style={{ display: "flex", gap: "5px" }}>
             <div style={{ width: "40%" }}>
@@ -171,19 +184,10 @@ const Form = () => {
                 onChange={handleChange}
                 className="ContactForm_input__bYj0J"
               />
+              {errors.phone && (
+                <span className="error-text">{errors.phone}</span>
+              )}
             </div>
-          </div>
-
-          {/* Age */}
-          <div className="ContactForm_inputWrapper__swD0R">
-            <input
-              type="text"
-              placeholder="Age"
-              className="ContactForm_input__bYj0J"
-              name="age"
-              value={formData?.age}
-              onChange={handleChange}
-            />
           </div>
 
           {/* Description */}

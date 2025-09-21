@@ -1,5 +1,6 @@
 import React from "react";
 import "./AboutFortis.css";
+import ButtonPopup from "./popupform/ButtonPopup";
 
 const AboutFortis = () => {
   return (
@@ -15,7 +16,6 @@ const AboutFortis = () => {
               With a commitment to excellence, the hospitals are known for
               delivering high-quality medical care across various specialties.
             </p>
-
             <div className="af-highlights">
               <div className="af-stat">
                 <span className="af-stat-number">28</span>
@@ -30,7 +30,6 @@ const AboutFortis = () => {
                 <span className="af-stat-label">Countries Served</span>
               </div>
             </div>
-
             <p className="af-description">
               The group offers comprehensive support for international patients
               including dedicated coordinators, helping with travel and
@@ -39,7 +38,6 @@ const AboutFortis = () => {
               Neurology & Neurosurgery, Gastroenterology, Oncology &
               Oncosurgery, Orthopedics, Transplants, etc.
             </p>
-
             <p className="af-description">
               They have treated over 200,000 international patients from more
               than 175 countries and maintain partnerships with over 20
@@ -82,13 +80,14 @@ const AboutFortis = () => {
                 to monitor the patient's recovery.
               </p>
             </div> */}
-
             <div className="af-actions">
-              <button className="af-btn-primary">Get FREE Opinion</button>
+              <ButtonPopup className="ips-cta-button" />
+              {/* <button className="af-btn-primary">Get FREE Opinion</button> */}
               {/* <button className="af-btn-secondary">
                 Learn More About Our Services
               </button> */}
             </div>
+            1
           </div>
 
           <div className="af-image">
