@@ -25,6 +25,7 @@
   margin-bottom: 20px;
   font-size: 20px;
   text-align: center;
+  color: #0ca854;
 }
 
 .popup-form-div {
@@ -60,4 +61,5 @@
   background: none;
   border: none;
   cursor: pointer;
+  color: #000;
 }

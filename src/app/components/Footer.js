@@ -1,4 +1,5 @@
 import React from "react";
+import ButtonPopup from "./popupform/ButtonPopup";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,7 +14,11 @@ const Footer = () => {
             Schedule a consultation with our expert medical team today and take
             the first step towards better health.
           </p>
-          <button style={styles.ctaButton}>Book an Appointment</button>
+          <ButtonPopup
+            className="footerctaButton"
+            titile="Book an Appointment"
+          />
+          {/* <button style={styles.ctaButton}>Book an Appointment</button> */}
         </div>
       </div>
     </footer>
