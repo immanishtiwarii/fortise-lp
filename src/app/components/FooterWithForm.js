@@ -82,6 +82,7 @@ const FooterWithForm = () => {
       phone: formData?.phonecode + formData?.phone,
       country: formData?.country,
       message: formData?.description,
+      platform: "fortise-lp",
     };
 
     try {
