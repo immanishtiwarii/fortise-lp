@@ -109,7 +109,7 @@ const Form = () => {
         // Server responded with a status code other than 2xx
         alert(
           "Submission failed: " + error.response.data.message ||
-            "Please try again."
+          "Please try again."
         );
       } else {
         // Network error or something else
@@ -122,111 +122,102 @@ const Form = () => {
 
   return (
     <>
-      <div className="HeroSection_formSection__mv8cV">
-        <h2
-          className="HeroSection_formTitle__v2xOK"
-          style={{ color: "#0CA854" }}
-        >
-          Свяжитесь с нашими медицинскими экспертами
-        </h2>
+      <form
+        className="ContactForm_formContainer__pUM9x"
+        onSubmit={handleSubmit}
+      >
+        {/* Patient Name */}
+        <div className="ContactForm_inputWrapper__swD0R">
+          <input
+            type="text"
+            placeholder="Patient Name"
+            className="ContactForm_input__bYj0J"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+          />
+          {errors.name && <span className="error-text">{errors.name}</span>}
+        </div>
 
-        <form
-          className="ContactForm_formContainer__pUM9x"
-          onSubmit={handleSubmit}
-        >
-          {/* Patient Name */}
-          <div className="ContactForm_inputWrapper__swD0R">
+        {/* Email */}
+        <div className="ContactForm_inputWrapper__swD0R">
+          <input
+            type="email"
+            placeholder="Enter Your Email-ID"
+            className="ContactForm_input__bYj0J"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+          {errors.email && <span className="error-text">{errors.email}</span>}
+        </div>
+
+        <Select
+          options={options}
+          value={options.find((option) => option.label === formData?.country)}
+          onChange={handleCountryChange}
+          placeholder="Select Your Country..."
+        />
+        {errors.country && (
+          <span className="error-text">{errors.countrye}</span>
+        )}
+
+        <div style={{ display: "flex", gap: "5px" }}>
+          <div style={{ width: "40%" }}>
             <input
               type="text"
-              placeholder="Patient Name"
+              placeholder="Country Code"
+              name="pcode"
+              value={formData?.phonecode}
+              readOnly
               className="ContactForm_input__bYj0J"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
             />
-            {errors.name && <span className="error-text">{errors.name}</span>}
           </div>
-
-          {/* Email */}
-          <div className="ContactForm_inputWrapper__swD0R">
+          <div>
             <input
-              type="email"
-              placeholder="Enter Your Email-ID"
-              className="ContactForm_input__bYj0J"
-              name="email"
-              value={formData.email}
+              type="number"
+              placeholder="Phone Number"
+              name="phone"
+              value={formData?.phone}
+              autoComplete="off"
               onChange={handleChange}
+              className="ContactForm_input__bYj0J"
             />
-            {errors.email && <span className="error-text">{errors.email}</span>}
+            {errors.phone && (
+              <span className="error-text">{errors.phone}</span>
+            )}
           </div>
+        </div>
 
-          <Select
-            options={options}
-            value={options.find((option) => option.label === formData?.country)}
-            onChange={handleCountryChange}
-            placeholder="Select Your Country..."
-          />
-          {errors.country && (
-            <span className="error-text">{errors.countrye}</span>
-          )}
+        {/* Description */}
+        <textarea
+          name="description"
+          value={formData?.description}
+          onChange={handleChange}
+          placeholder="Describe the current medical problem"
+          className="ContactForm_input__bYj0J"
+          rows="4"
+        ></textarea>
 
-          <div style={{ display: "flex", gap: "5px" }}>
-            <div style={{ width: "40%" }}>
-              <input
-                type="text"
-                placeholder="Country Code"
-                name="pcode"
-                value={formData?.phonecode}
-                readOnly
-                className="ContactForm_input__bYj0J"
-              />
-            </div>
-            <div>
-              <input
-                type="number"
-                placeholder="Phone Number"
-                name="phone"
-                value={formData?.phone}
-                autoComplete="off"
-                onChange={handleChange}
-                className="ContactForm_input__bYj0J"
-              />
-              {errors.phone && (
-                <span className="error-text">{errors.phone}</span>
-              )}
-            </div>
-          </div>
+        {/* Submit Button */}
+        <button
+          type="submit"
+          disabled={loading}
+          className="ContactForm_submitButton__HTHGx"
+          style={{
+            backgroundColor: "#0CA854",
+            opacity: 1,
+            cursor: "pointer",
+          }}
+        >
+          {loading ? "Loading..." : "Получите бесплатное мнение"}
+        </button>
 
-          {/* Description */}
-          <textarea
-            name="description"
-            value={formData?.description}
-            onChange={handleChange}
-            placeholder="Describe the current medical problem"
-            className="ContactForm_input__bYj0J"
-            rows="4"
-          ></textarea>
-
-          {/* Submit Button */}
-          <button
-            type="submit"
-            disabled={loading}
-            className="ContactForm_submitButton__HTHGx"
-            style={{
-              backgroundColor: "#0CA854",
-              opacity: 1,
-              cursor: "pointer",
-            }}
-          >
-            {loading ? "Loading..." : "Получите бесплатное мнение"}
-          </button>
-
-          {/* Response Time Text */}
-          <p className="ContactForm_responseTime__Uak0U">
-            Получите первый ответ в течение 4 часов.
-          </p>
-        </form>
-      </div>
+        {/* Response Time Text */}
+        <p className="ContactForm_responseTime__Uak0U">
+          Получите первый ответ в течение 4 часов.
+        </p>
+      </form>
     </>
   );
 };

@@ -34,7 +34,6 @@
   display: none;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
   .simple-footer {
     padding: 8px;
