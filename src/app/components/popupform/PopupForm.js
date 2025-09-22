@@ -6,7 +6,7 @@ import axios from "axios";
 
 const PopupForm = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
-
+  const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({
     name: "",
@@ -73,16 +73,19 @@ const PopupForm = ({ isOpen, onClose }) => {
     if (!validateForm()) {
       return;
     }
+    setLoading(true);
+    const datatosend = {
+      name: formData?.name,
+      email: formData?.email,
+      phone: formData?.phonecode + formData?.phone,
+      country: formData?.country,
+      message: formData?.description,
+    };
 
     try {
       const response = await axios.post(
-        "https://your-api-endpoint.com/form",
-        formData,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
+        "https://lp-backend-79l4.onrender.com/api/createlead",
+        datatosend
       );
 
       console.log("Response:", response.data);
@@ -112,6 +115,8 @@ const PopupForm = ({ isOpen, onClose }) => {
         // Network error or something else
         alert("Something went wrong. Please try again later.");
       }
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -193,8 +198,8 @@ const PopupForm = ({ isOpen, onClose }) => {
               onChange={handleChange}
             />
           </div>
-          <button type="submit" className="submit-btn">
-            Get Free Opinion
+          <button type="submit" className="submit-btn" disabled={loading}>
+            {loading ? "Loading..." : "Get Free Opinion"}
           </button>
         </form>
       </div>

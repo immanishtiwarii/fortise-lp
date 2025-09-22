@@ -6,6 +6,7 @@ import axios from "axios";
 
 const Form = () => {
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -71,7 +72,7 @@ const Form = () => {
     if (!validateForm()) {
       return;
     }
-
+    setLoading(true);
     const datatosend = {
       name: formData?.name,
       email: formData?.email,
@@ -82,7 +83,7 @@ const Form = () => {
 
     try {
       const response = await axios.post(
-        "https://crmbackend-6wur.onrender.com/api/createlead",
+        "https://lp-backend-79l4.onrender.com/api/createlead",
         datatosend
       );
 
@@ -113,6 +114,8 @@ const Form = () => {
         // Network error or something else
         alert("Something went wrong. Please try again later.");
       }
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -206,6 +209,7 @@ const Form = () => {
           {/* Submit Button */}
           <button
             type="submit"
+            disabled={loading}
             className="ContactForm_submitButton__HTHGx"
             style={{
               backgroundColor: "#0CA854",
@@ -213,7 +217,7 @@ const Form = () => {
               cursor: "pointer",
             }}
           >
-            Get FREE Opinion
+            {loading ? "Loading..." : "Get Free Opinion"}
           </button>
 
           {/* Response Time Text */}

@@ -7,6 +7,7 @@ import axios from "axios";
 
 const FooterWithForm = () => {
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -73,15 +74,20 @@ const FooterWithForm = () => {
       return;
     }
 
+    setLoading(true);
+
+    const datatosend = {
+      name: formData?.name,
+      email: formData?.email,
+      phone: formData?.phonecode + formData?.phone,
+      country: formData?.country,
+      message: formData?.description,
+    };
+
     try {
       const response = await axios.post(
-        "https://your-api-endpoint.com/form",
-        formData,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
+        "https://lp-backend-79l4.onrender.com/api/createlead",
+        datatosend
       );
       alert("Form submitted successfully!");
 
@@ -106,6 +112,8 @@ const FooterWithForm = () => {
       } else {
         alert("Something went wrong. Please try again later.");
       }
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -175,8 +183,12 @@ const FooterWithForm = () => {
               value={formData.desc}
               onChange={handleChange}
             />
-            <button type="submit" className="footer-submit-btn">
-              Get Free Opinion
+            <button
+              type="submit"
+              className="footer-submit-btn"
+              disabled={loading}
+            >
+              {loading ? "Loading..." : "Get Free Opinion"}
             </button>
           </form>
         </div>
