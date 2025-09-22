@@ -3,6 +3,7 @@ import "./PopupForm.css";
 import { countries } from "../CountryList";
 import Select from "react-select";
 import axios from "axios";
+import CommonPopup from "../CommonPopup";
 
 const PopupForm = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -18,6 +19,13 @@ const PopupForm = ({ isOpen, onClose }) => {
     age: "",
   });
 
+  const [popup, setPopup] = useState({
+    isOpen: false,
+    title: '',
+    message: '',
+    type: 'success'
+  });
+
   const options = useMemo(
     () =>
       countries?.map((e) => ({
@@ -26,6 +34,24 @@ const PopupForm = ({ isOpen, onClose }) => {
       })),
     [countries]
   );
+
+  const showPopup = (title, message, type = 'success') => {
+    setPopup({
+      isOpen: true,
+      title,
+      message,
+      type
+    });
+  };
+
+  const closePopup = () => {
+    setPopup({
+      isOpen: false,
+      title: '',
+      message: '',
+      type: 'success'
+    });
+  };
 
   const validateForm = () => {
     const newErrors = {};
@@ -89,9 +115,10 @@ const PopupForm = ({ isOpen, onClose }) => {
         datatosend
       );
 
-      console.log("Response:", response.data);
+      // onClose()
 
-      alert("Form submitted successfully!");
+      // alert("Form submitted successfully!");
+      showPopup("Success!", "Form submitted successfully!", "success");
 
       // Reset form if needed
       setFormData({
@@ -110,7 +137,7 @@ const PopupForm = ({ isOpen, onClose }) => {
         // Server responded with a status code other than 2xx
         alert(
           "Submission failed: " + error.response.data.message ||
-            "Please try again."
+          "Please try again."
         );
       } else {
         // Network error or something else
@@ -122,89 +149,98 @@ const PopupForm = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div className="popup-overlay" onClick={onClose}>
-      <div className="popup-form" onClick={(e) => e.stopPropagation()}>
-        <button className="close-btn" onClick={onClose}>
-          &times;
-        </button>
-        <h2>Свяжитесь с нашими медицинскими экспертами</h2>
-        <form onSubmit={handleSubmit} className="form-fields">
-          <div className="popup-form-div">
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={formData.name}
-              onChange={handleChange}
-            />
-            {errors.name && <span className="error-text">{errors.name}</span>}
-          </div>
-          <div className="popup-form-div">
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={handleChange}
-            />
-            {errors.email && <span className="error-text">{errors.email}</span>}
-          </div>
-          <div className="popup-form-div">
-            <Select
-              options={options}
-              value={options.find(
-                (option) => option.label === formData?.country
-              )}
-              onChange={handleCountryChange}
-              placeholder="Select Your Country..."
-            />
-            {errors.country && (
-              <span className="error-text">{errors.country}</span>
-            )}
-          </div>
-
-          <div
-            className="popup-form-div"
-            style={{ display: "flex", gap: "5px", marginTop: "10px" }}
-          >
-            <div style={{ width: "40%" }}>
+    <>
+      <div className="popup-overlay" onClick={onClose}>
+        <div className="popup-form" onClick={(e) => e.stopPropagation()}>
+          <button className="close-btn" onClick={onClose}>
+            &times;
+          </button>
+          <h2>Свяжитесь с нашими медицинскими экспертами</h2>
+          <form onSubmit={handleSubmit} className="form-fields">
+            <div className="popup-form-div">
               <input
                 type="text"
-                placeholder="Country Code"
-                name="pcode"
-                value={formData?.phonecode}
-                readOnly
-              />
-            </div>
-            <div style={{ width: "60%" }}>
-              <input
-                type="number"
-                placeholder="Phone Number"
-                name="phone"
-                value={formData?.phone}
-                autoComplete="off"
+                name="name"
+                placeholder="Name"
+                value={formData.name}
                 onChange={handleChange}
               />
-              {errors.phone && (
-                <span className="error-text">{errors.phone}</span>
+              {errors.name && <span className="error-text">{errors.name}</span>}
+            </div>
+            <div className="popup-form-div">
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+              />
+              {errors.email && <span className="error-text">{errors.email}</span>}
+            </div>
+            <div className="popup-form-div">
+              <Select
+                options={options}
+                value={options.find(
+                  (option) => option.label === formData?.country
+                )}
+                onChange={handleCountryChange}
+                placeholder="Select Your Country..."
+              />
+              {errors.country && (
+                <span className="error-text">{errors.country}</span>
               )}
             </div>
-          </div>
-          <div className="popup-form-div">
-            <textarea
-              name="description"
-              placeholder="Describe your medical problem"
-              rows={2}
-              value={formData.description}
-              onChange={handleChange}
-            />
-          </div>
-          <button type="submit" className="submit-btn" disabled={loading}>
-            {loading ? "Loading..." : "Получите бесплатное мнение"}
-          </button>
-        </form>
+
+            <div
+              className="popup-form-div"
+              style={{ display: "flex", gap: "5px", marginTop: "10px" }}
+            >
+              <div style={{ width: "40%" }}>
+                <input
+                  type="text"
+                  placeholder="Country Code"
+                  name="pcode"
+                  value={formData?.phonecode}
+                  readOnly
+                />
+              </div>
+              <div style={{ width: "60%" }}>
+                <input
+                  type="number"
+                  placeholder="Phone Number"
+                  name="phone"
+                  value={formData?.phone}
+                  autoComplete="off"
+                  onChange={handleChange}
+                />
+                {errors.phone && (
+                  <span className="error-text">{errors.phone}</span>
+                )}
+              </div>
+            </div>
+            <div className="popup-form-div">
+              <textarea
+                name="description"
+                placeholder="Describe your medical problem"
+                rows={2}
+                value={formData.description}
+                onChange={handleChange}
+              />
+            </div>
+            <button type="submit" className="submit-btn" disabled={loading}>
+              {loading ? "Loading..." : "Получите бесплатное мнение"}
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
+      <CommonPopup
+        isOpen={popup.isOpen}
+        onClose={closePopup}
+        title={popup.title}
+        message={popup.message}
+        type={popup.type}
+      />
+    </>
   );
 };
 

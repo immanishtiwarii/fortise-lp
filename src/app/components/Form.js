@@ -3,10 +3,17 @@ import React, { useMemo, useState } from "react";
 import { countries } from "./CountryList";
 import Select from "react-select";
 import axios from "axios";
+import CommonPopup from "./CommonPopup";
 
 const Form = () => {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
+  const [popup, setPopup] = useState({
+    isOpen: false,
+    title: '',
+    message: '',
+    type: 'success'
+  });
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -58,6 +65,24 @@ const Form = () => {
     }));
   };
 
+  const showPopup = (title, message, type = 'success') => {
+    setPopup({
+      isOpen: true,
+      title,
+      message,
+      type
+    });
+  };
+
+  const closePopup = () => {
+    setPopup({
+      isOpen: false,
+      title: '',
+      message: '',
+      type: 'success'
+    });
+  };
+
   const handleCountryChange = (selectedOption) => {
     setFormData((prevData) => ({
       ...prevData,
@@ -87,10 +112,8 @@ const Form = () => {
         "https://lp-backend-79l4.onrender.com/api/createlead",
         datatosend
       );
-
-      console.log("Response:", response.data);
-
-      alert("Form submitted successfully!");
+      // alert("Form submitted successfully!");
+      showPopup("Success!", "Form submitted successfully!", "success");
 
       // Reset form if needed
       setFormData({
@@ -218,6 +241,15 @@ const Form = () => {
           Получите первый ответ в течение 4 часов.
         </p>
       </form>
+
+      {/* Common Popup */}
+      <CommonPopup
+        isOpen={popup.isOpen}
+        onClose={closePopup}
+        title={popup.title}
+        message={popup.message}
+        type={popup.type}
+      />
     </>
   );
 };

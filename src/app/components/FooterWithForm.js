@@ -4,6 +4,7 @@ import "./FooterWithForm.css";
 import { countries } from "./CountryList";
 import Select from "react-select";
 import axios from "axios";
+import CommonPopup from "./CommonPopup";
 
 const FooterWithForm = () => {
   const [errors, setErrors] = useState({});
@@ -17,6 +18,32 @@ const FooterWithForm = () => {
     description: "",
     age: "",
   });
+
+  const [popup, setPopup] = useState({
+    isOpen: false,
+    title: '',
+    message: '',
+    type: 'success'
+  });
+
+  const showPopup = (title, message, type = 'success') => {
+    setPopup({
+      isOpen: true,
+      title,
+      message,
+      type
+    });
+  };
+
+  const closePopup = () => {
+    setPopup({
+      isOpen: false,
+      title: '',
+      message: '',
+      type: 'success'
+    });
+  };
+
 
   const options = useMemo(
     () =>
@@ -90,7 +117,9 @@ const FooterWithForm = () => {
         "https://lp-backend-79l4.onrender.com/api/createlead",
         datatosend
       );
-      alert("Form submitted successfully!");
+      // alert("Form submitted successfully!");
+
+      showPopup("Success!", "Form submitted successfully!", "success");
 
       // Reset form if needed
       setFormData({
@@ -204,6 +233,13 @@ const FooterWithForm = () => {
           </form>
         </div>
       </footer>
+      <CommonPopup
+        isOpen={popup.isOpen}
+        onClose={closePopup}
+        title={popup.title}
+        message={popup.message}
+        type={popup.type}
+      />
     </>
   );
 };

@@ -1,4 +1,3 @@
-import React from "react";
 import Form from "../Form";
 import Award from "./Award";
 
@@ -40,9 +39,12 @@ const HeroSection = () => {
                 </div>
               </div>
               <div className="HeroSection_formMobileSection__W_eX_">
-                <h2 className="HeroSection_formTitle__v2xOK" style={{ color: "#0CA854" }}>Свяжитесь с нашими медицинскими экспертами</h2>
+                <h2 className="HeroSection_formTitle__v2xOK" style={{ color: "#0CA854" }}>
+                  Свяжитесь с нашими медицинскими экспертами
+                </h2>
                 <Form />
               </div>
+
               <Award />
             </div>
             <div className="HeroSection_formSection__mv8cV">
