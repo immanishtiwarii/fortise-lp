@@ -1,0 +1,60 @@
+/* SimpleFooterCTA.css */
+
+.btn {
+  flex: 1;
+  padding: 12px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn {
+  background: #25d366;
+  color: white;
+}
+
+.whatsapp-btn:hover {
+  background: #128c7e;
+}
+
+.opinion-btn {
+  background: #007bff;
+  color: white;
+}
+
+.opinion-btn:hover {
+  background: #0056b3;
+}
+
+.simple-footer {
+  display: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .simple-footer {
+    padding: 8px;
+  }
+
+  .simple-footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 10px;
+    background: white;
+    border-top: 1px solid #ddd;
+    z-index: 1000;
+  }
+
+  .btn {
+    padding: 10px;
+    font-size: 13px;
+  }
+}

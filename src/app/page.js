@@ -7,6 +7,7 @@ import FooterWithForm from "./components/FooterWithForm";
 import Header from "./components/Header";
 import HeroSection from "./components/herosection/HeroSection";
 import InternationalPatientServices from "./components/InternationalPatientServices";
+import MobileFooterCTA from "./components/MobileFooterCTA";
 import HealthcareProcess from "./components/section-two/HealthcareProcess";
 import SimilarHospitals from "./components/SimilarHospitals";
 
@@ -25,6 +26,7 @@ export default function Home() {
         <SimilarHospitals />
         <FooterWithForm />
         <Footer />
+        <MobileFooterCTA />
       </main>
     </>
   );

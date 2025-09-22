@@ -108,7 +108,7 @@ const FooterWithForm = () => {
       if (error.response) {
         alert(
           "Submission failed: " + error.response.data.message ||
-            "Please try again."
+          "Please try again."
         );
       } else {
         alert("Something went wrong. Please try again later.");
@@ -127,34 +127,41 @@ const FooterWithForm = () => {
           </h2>
 
           <form className="footer-form" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              placeholder="Name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={handleChange}
-            />
-            {errors.email && <span className="error-text">{errors.email}</span>}
-            <Select
-              options={options}
-              value={options.find(
-                (option) => option.label === formData?.country
+            <div className="footer-form-div">
+              <input
+                type="text"
+                placeholder="Name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+              />
+              {errors.name && <span className="error-text">{errors.name}</span>}
+            </div>
+            <div className="footer-form-div">
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+              />
+              {errors.email && <span className="error-text">{errors.email}</span>}
+            </div>
+            <div className="footer-form-div">
+              <Select
+                options={options}
+                value={options.find(
+                  (option) => option.label === formData?.country
+                )}
+                onChange={handleCountryChange}
+                placeholder="Select Your Country..."
+              />
+              {errors.country && (
+                <span className="error-text">{errors.country}</span>
               )}
-              onChange={handleCountryChange}
-              placeholder="Select Your Country..."
-            />
-            {errors.country && (
-              <span className="error-text">{errors.country}</span>
-            )}
+            </div>
 
-            <div style={{ display: "flex", gap: "5px", marginTop: "10px" }}>
+            <div className="footer-form-div" style={{ display: "flex", gap: "5px", marginTop: "10px" }}>
               <div style={{ width: "40%" }}>
                 <input
                   type="text"
@@ -178,13 +185,15 @@ const FooterWithForm = () => {
                 )}
               </div>
             </div>
-            <textarea
-              name="desc"
-              placeholder="Describe your concern"
-              rows={4}
-              value={formData.desc}
-              onChange={handleChange}
-            />
+            <div className="footer-form-div">
+              <textarea
+                name="desc"
+                placeholder="Describe your concern"
+                rows={4}
+                value={formData.desc}
+                onChange={handleChange}
+              />
+            </div>
             <button
               type="submit"
               className="footer-submit-btn"
