@@ -10,57 +10,57 @@ const DepartmentsCarousel = () => {
   const departments = [
     {
       id: 1,
-      name: "Cardiology & Cardiac Surgery",
+      name: "Кардиология и кардиохирургия",
       icon: "/image/dep/1.webp",
     },
     {
       id: 2,
-      name: "Gastroenterology",
+      name: "Гастроэнтерология",
       icon: "/image/dep/2.webp",
     },
     {
       id: 3,
-      name: "Hepatology",
+      name: "Гепатология",
       icon: "/image/dep/3.svg",
     },
     {
       id: 4,
-      name: "IVF",
+      name: "ЭКО (вспомогательные репродуктивные технологии)",
       icon: "/image/dep/4.webp",
     },
     {
       id: 5,
-      name: "Nephrology",
+      name: "Нефрология",
       icon: "/image/dep/5.webp",
     },
     {
       id: 6,
-      name: "Neurology & Neurosurgery",
+      name: "Неврология и нейрохирургия",
       icon: "/image/dep/6.webp",
     },
     {
       id: 7,
-      name: "Oncology",
+      name: "Онкология",
       icon: "/image/dep/7.webp",
     },
     {
       id: 8,
-      name: "Orthopedics",
+      name: "Ортопедия",
       icon: "/image/dep/8.webp",
     },
     {
       id: 10,
-      name: "Spine Surgery",
+      name: "Хирургия позвоночника",
       icon: "/image/dep/9.webp",
     },
     {
       id: 11,
-      name: "Transplant Surgery",
+      name: "Трансплантационная хирургия",
       icon: "/image/dep/10.webp",
     },
     {
       id: 12,
-      name: "Urology",
+      name: "Урология",
       icon: "/image/dep/11.webp",
     },
   ];
@@ -75,9 +75,10 @@ const DepartmentsCarousel = () => {
     >
       <div className="dept-container">
         <div className="dept-header">
-          <h2 className="dept-title">Our Medical Departments</h2>
+          <h2 className="dept-title">Наши медицинские отделы</h2>
           <p className="dept-subtitle">
-            Experience world-class healthcare with our specialized departments
+            Получите медицинское обслуживание мирового класса в наших
+            специализированных отделениях
           </p>
         </div>
 

@@ -80,7 +80,7 @@ const PopupForm = ({ isOpen, onClose }) => {
       phone: formData?.phonecode + formData?.phone,
       country: formData?.country,
       message: formData?.description,
-      platform:"fortise-lp"
+      platform: "fortise-lp",
     };
 
     try {
@@ -127,7 +127,7 @@ const PopupForm = ({ isOpen, onClose }) => {
         <button className="close-btn" onClick={onClose}>
           &times;
         </button>
-        <h2>Get in Touch with Our Medical Experts</h2>
+        <h2>Свяжитесь с нашими медицинскими экспертами</h2>
         <form onSubmit={handleSubmit} className="form-fields">
           <div className="popup-form-div">
             <input
@@ -200,7 +200,7 @@ const PopupForm = ({ isOpen, onClose }) => {
             />
           </div>
           <button type="submit" className="submit-btn" disabled={loading}>
-            {loading ? "Loading..." : "Get Free Opinion"}
+            {loading ? "Loading..." : "Получите бесплатное мнение"}
           </button>
         </form>
       </div>

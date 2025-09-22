@@ -8,27 +8,26 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question:
-        "What should I bring with me for my medical treatment at Fortis?",
+      question: "Что мне нужно взять с собой для лечения в больнице Fortis?",
       answer:
-        "It is advised to bring your medical history reports, any current medications, passport, visa, identification documents, and insurance documents.",
+        "Рекомендуется взять с собой медицинские документы, текущие назначения и лекарства, паспорт, визу, удостоверение личности и страховые документы.",
     },
     {
       question:
-        "What kind of language support is available for non-English speaking patients?",
+        "Какую языковую поддержку вы предоставляете пациентам, не говорящим на английском?",
       answer:
-        "Professional translators and interpreters are available at the hospital for non-English-speaking patients to avoid the language barrier.",
+        "В больнице доступны профессиональные переводчики и устные переводчики для пациентов, не говорящих на английском, чтобы устранить языковой барьер.",
     },
     {
-      question: "How can I obtain a cost estimate for my treatment?",
+      question: "Как я могу получить предварительную стоимость лечения?",
       answer:
-        "You can share the details of your medical conditions, diagnosis, and any other medical report. The team will review the reports and provide a detailed cost estimate for the treatment.",
+        "Вы можете предоставить информацию о вашем состоянии, диагнозе и другие медицинские документы. Команда изучит их и предоставит подробную смету стоимости лечения.",
     },
     {
       question:
-        "Are there any special dietary arrangements available for international patients?",
+        "Предусмотрено ли специальное питание для международных пациентов?",
       answer:
-        "Yes, international patients can get special dietary arrangements according to their cultural and nutritional needs.",
+        "Да, для международных пациентов доступны специальные диетические варианты с учетом их культурных и питательных потребностей.",
     },
   ];
 
@@ -87,44 +86,35 @@ const FAQSection = () => {
 
           <div className="faq-contact">
             <div className="faq-contact-card">
-              <h3>Still have questions?</h3>
+              <h3>Остались вопросы?</h3>
               <p>
-                Our patient care team is available to answer any questions you
-                may have about treatment at Fortis Hospitals.
+                Наша команда по работе с пациентами готова ответить на любые
+                ваши вопросы о лечении в больницах Fortis.
               </p>
+
               <div className="faq-contact-methods">
-                {/* <div className="contact-method">
+                <div className="contact-method">
                   <div className="contact-icon">
+                    {/* WhatsApp SVG */}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
+                      viewBox="0 0 32 32"
                       fill="currentColor"
                     >
-                      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z" />
+                      <path d="M16 .396C7.165.396 0 7.56 0 16.396c0 2.89.765 5.723 2.212 8.212L.06 31.94l7.482-2.123c2.423 1.325 5.166 2.018 7.938 2.018 8.835 0 16-7.165 16-16S24.835.396 16 .396zm0 29.208c-2.437 0-4.815-.652-6.895-1.886l-.496-.292-4.438 1.26 1.283-4.323-.323-.507c-1.342-2.1-2.048-4.528-2.048-7.06 0-7.297 5.94-13.239 13.24-13.239 7.297 0 13.239 5.94 13.239 13.24 0 7.297-5.942 13.238-13.24 13.238zm7.294-9.234c-.383-.192-2.266-1.118-2.616-1.243-.35-.13-.605-.192-.86.192s-.985 1.243-1.207 1.5c-.222.256-.444.288-.826.096-.383-.192-1.618-.596-3.084-1.902-1.14-1.016-1.912-2.27-2.135-2.653-.222-.383-.024-.59.168-.782.173-.172.383-.444.574-.666.192-.222.256-.383.383-.637.128-.256.064-.48-.032-.672-.096-.192-.86-2.073-1.18-2.843-.31-.745-.626-.645-.86-.657-.222-.01-.48-.012-.738-.012-.256 0-.672.096-1.024.48-.352.383-1.344 1.312-1.344 3.2s1.376 3.706 1.568 3.964c.192.256 2.71 4.14 6.568 5.808.918.396 1.632.63 2.19.81.92.294 1.756.252 2.418.153.738-.11 2.266-.922 2.586-1.815.318-.894.318-1.658.222-1.815-.096-.157-.35-.254-.73-.446z" />
                     </svg>
                   </div>
                   <div className="contact-info">
-                    <span>Email us at</span>
-                    <a href="mailto:info@fortishealthcare.com">
-                      info@fortishealthcare.com
+                    <span>Chat Us</span>
+                    <a
+                      href="https://wa.me/918802552796"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      +91 88025 52796
                     </a>
                   </div>
                 </div>
-                <div className="contact-method">
-                  <div className="contact-icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                    >
-                      <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM12 3v10l3-3h6V3h-9z" />
-                    </svg>
-                  </div>
-                  <div className="contact-info">
-                    <span>Call us at</span>
-                    <a href="tel:+911234567890">+91 123 456 7890</a>
-                  </div>
-                </div> */}
               </div>
 
               <ButtonPopup className="ips-cta-button" titile="Contact Us" />

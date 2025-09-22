@@ -4,12 +4,10 @@ import DoctorsCarousel from "./components/doctors/DoctorsCarousel";
 import FAQSection from "./components/FAQSection";
 import Footer from "./components/Footer";
 import FooterWithForm from "./components/FooterWithForm";
-import FortisBanner from "./components/FortisBanner";
 import Header from "./components/Header";
 import HeroSection from "./components/herosection/HeroSection";
 import InternationalPatientServices from "./components/InternationalPatientServices";
 import HealthcareProcess from "./components/section-two/HealthcareProcess";
-import SectionTwo from "./components/section-two/SectionTwo";
 import SimilarHospitals from "./components/SimilarHospitals";
 
 export default function Home() {
@@ -17,11 +15,8 @@ export default function Home() {
     <>
       <Header />
       <main>
-        {/* <FortisBanner /> */}
         <HeroSection />
         <HealthcareProcess />
-        {/* <SectionTwo /> */}
-        {/* <Doctors /> */}
         <DoctorsCarousel />
         <DepartmentsCarousel />
         <InternationalPatientServices />

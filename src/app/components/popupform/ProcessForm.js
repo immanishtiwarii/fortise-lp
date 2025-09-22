@@ -11,7 +11,7 @@ const ProcessForm = () => {
           className="hp-cta-button-compact"
           onClick={() => setShowForm(true)}
         >
-          Start Your Journey
+          Начни свое путешествие
           <svg
             width="14"
             height="14"

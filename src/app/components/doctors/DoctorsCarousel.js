@@ -14,84 +14,85 @@ const DoctorsCarousel = () => {
   const doctors = [
     {
       id: 10,
-      name: "Dr. Ashok Seth",
+      name: "Доктор Ашок Сет",
       image: "/image/doctor/dr-ashok-seth.webp",
-      specialty: "Cardiac Surgeon",
-      hospital: "Fortis Escorts Heart Insititute, New Delhi",
-      experience: "35+ years of experience",
+      specialty: "Кардиохирург",
+      hospital: "Кардиологический институт Fortis Escorts, Нью-Дели",
+      experience: "Более 35 лет опыта",
     },
     {
       id: 11,
-      name: "Dr. (Col) Manjinder Sandhu",
+      name: "Доктор (полковник) Манжиндер Сандху",
       image: "/image/doctor/manjinder.webp",
-      specialty: "Interventional Cardiologist",
-      hospital: "Fortis Memorial Research Institute, Gurgaon",
-      experience: "32+ years of experience",
+      specialty: "Интервенционный кардиолог",
+      hospital: "Исследовательский институт Fortis Memorial, Гургаон",
+      experience: "Более 32 лет опыта",
     },
     {
       id: 12,
-      name: "Dr. Dinesh Kumar Mittal",
+      name: "Доктор Динеш Кумар Миттал",
       image: "/image/doctor/dinesh.webp",
-      specialty: "Cardiac Surgeon",
-      hospital: "Fortis Hospital, Shalimar Bagh, New Delhi",
-      experience: "31+ years of experience",
+      specialty: "Кардиохирург",
+      hospital: "Больница Fortis, Шалимар-Багх, Нью-Дели",
+      experience: "Более 31 года опыта",
     },
     {
       id: 13,
-      name: "Dr. Rahul Bhargava",
+      name: "Доктор Рахул Бхаргава",
       image: "/image/doctor/dr-rahul-bhargava-1909.webp",
-      specialty: "Hematologist",
-      hospital: "Fortis Memorial Research Institute, Gurgaon",
-      experience: "24+ years of experience",
+      specialty: "Гематолог",
+      hospital: "Исследовательский институт Fortis Memorial, Гургаон",
+      experience: "Более 24 лет опыта",
     },
     {
       id: 14,
-      name: "Dr. Sandeep Vaishya",
+      name: "Доктор Сандип Вайшья",
       image: "/image/doctor/dr-sandeep-vaishya-566.webp",
-      specialty: "Neurosurgeon",
-      hospital: "Fortis Memorial Research Institute, Gurgaon",
-      experience: "37+ years of experience",
+      specialty: "Нейрохирург",
+      hospital: "Исследовательский институт Fortis Memorial, Гургаон",
+      experience: "Более 37 лет опыта",
     },
     {
       id: 1,
-      name: "Dr. Vivek Vij",
+      name: "Доктор Вивек Видж",
       image: "/image/doctor/vivek.webp",
-      specialty: "Liver Transplant Specialist",
-      hospital: "Fortis Hospital, Noida",
-      experience: "28 years of experience",
+      specialty: "Специалист по трансплантации печени",
+      hospital: "Больница Fortis, Ноида",
+      experience: "28 лет опыта",
     },
     {
       id: 2,
-      name: "Dr. Vikas Dua",
+      name: "Доктор Викас Дуа",
       image: "/image/doctor/vikash.webp",
-      specialty: "Hematologist",
-      hospital: "Fortis Hospital, Noida",
-      experience: "15 years of experience",
+      specialty: "Гематолог",
+      hospital: "Больница Fortis, Ноида",
+      experience: "15 лет опыта",
     },
     {
       id: 3,
-      name: "Dr. Vinod Raina",
+      name: "Доктор Винод Райна",
       image: "/image/doctor/vinod.webp",
-      specialty: "Medical Oncologist",
-      hospital: "Fortis Memorial Research Institute, Gurgaon",
-      experience: "51 years of experience",
+      specialty: "Медицинский онколог",
+      hospital: "Исследовательский институт Fortis Memorial, Гургаон",
+      experience: "51 год опыта",
     },
     {
       id: 4,
-      name: "Dr. Manoj Miglani",
+      name: "Доктор Манодж Миглани",
       image: "/image/doctor/manoj.webp",
-      specialty: "Spine Surgeon",
-      hospital: "Fortis Hospital, Vasant Kunj, New Delhi",
-      experience: "28 years of experience",
+      specialty: "Хирург позвоночника",
+      hospital: "Больница Fortis, Васант Кундж, Нью-Дели",
+      experience: "28 лет опыта",
     },
   ];
 
   return (
     <section className="doctors-carousel-section">
       <div className="doctors-container">
-        <h2 className="doctors-section-title">Our Expert Doctors</h2>
+        <h2 className="doctors-section-title">Наши опытные врачи</h2>
         <p className="doctors-section-subtitle">
-          Meet our team of highly qualified medical professionals
+          Познакомьтесь с нашей командой высококвалифицированных медицинских
+          специалистов
         </p>
 
         <Swiper
@@ -141,7 +142,16 @@ const DoctorsCarousel = () => {
                   <p className="doctor-experience">{doctor.experience}</p>
 
                   <div className="doctor-actions">
-                    <button className="chat-btn">
+                    <button
+                      className="chat-btn"
+                      onClick={() =>
+                        window.open(
+                          "https://wa.me/918802552796",
+                          "_blank",
+                          "noopener,noreferrer"
+                        )
+                      }
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 448 512"

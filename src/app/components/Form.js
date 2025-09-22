@@ -79,7 +79,7 @@ const Form = () => {
       phone: formData?.phonecode + formData?.phone,
       country: formData?.country,
       message: formData?.description,
-      platform:"fortise-lp"
+      platform: "fortise-lp",
     };
 
     try {
@@ -127,7 +127,7 @@ const Form = () => {
           className="HeroSection_formTitle__v2xOK"
           style={{ color: "#0CA854" }}
         >
-          Get in Touch with Our Medical Experts
+          Свяжитесь с нашими медицинскими экспертами
         </h2>
 
         <form
@@ -218,12 +218,12 @@ const Form = () => {
               cursor: "pointer",
             }}
           >
-            {loading ? "Loading..." : "Get Free Opinion"}
+            {loading ? "Loading..." : "Получите бесплатное мнение"}
           </button>
 
           {/* Response Time Text */}
           <p className="ContactForm_responseTime__Uak0U">
-            Get First Response Within 4hrs.
+            Получите первый ответ в течение 4 часов.
           </p>
         </form>
       </div>

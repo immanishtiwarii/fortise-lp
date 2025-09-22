@@ -12,42 +12,42 @@ const SimilarHospitals = () => {
   const hospitals = [
     {
       id: 1,
-      name: "Fortis Escorts Heart Institute, New Delhi",
+      name: "Институт сердца Fortis Escorts, Нью-Дели",
       address:
-        "Metro Station, Okhla Rd, opposite Sukhdev Vihar, Sarai Jullena, New Friends Colony, New Delhi, Delhi 110025",
+        "Станция метро, Okhla Rd, напротив Sukhdev Vihar, Sarai Jullena, New Friends Colony, Нью-Дели, Делхи 110025",
       image: "/image/hospital/Escort.jpg",
-      specialty: "Cardiology & Cardiac Surgery",
+      specialty: "Кардиология и кардиохирургия",
     },
     {
       id: 2,
-      name: "Fortis Hospital, Noida",
+      name: "Больница Fortis, Ноида",
       address:
-        "B-22, Rasoolpur Nawada, D Block, Sector 62, Noida, Uttar Pradesh 201301",
+        "B-22, Rasoolpur Nawada, D Block, Sector 62, Ноида, Uttar Pradesh 201301",
       image: "/image/hospital/noida.avif",
-      specialty: "Multi-Specialty Hospital",
+      specialty: "Многопрофильная больница",
     },
     {
       id: 3,
-      name: "Fortis Hospital, Shalimar Bagh, New Delhi",
+      name: "Больница Fortis, Shalimar Bagh, Нью-Дели",
       address:
-        "A Block, Shaheed Udham Singh Marg, Poorbi Shalimar Bag, Shalimar Bagh New Delhi, 110088",
+        "A Block, Shaheed Udham Singh Marg, Poorbi Shalimar Bag, Shalimar Bagh, Нью-Дели, 110088",
       image: "/image/hospital/shalimar.avif",
-      specialty: "Multi-Specialty Hospital",
+      specialty: "Многопрофильная больница",
     },
     {
       id: 4,
-      name: "Fortis Hospital Vasant Kunj, New Delhi",
+      name: "Больница Fortis, Vasant Kunj, Нью-Дели",
       address:
-        "Aruna Asaf Ali Marg, Pocket 1, Sector B, Vasant Kunj, New Delhi, Delhi 110070",
+        "Aruna Asaf Ali Marg, Pocket 1, Sector B, Vasant Kunj, Нью-Дели, Делхи 110070",
       image: "/image/hospital/vasant-kunj.jpg",
-      specialty: "Multi-Specialty Hospital",
+      specialty: "Многопрофильная больница",
     },
     {
       id: 5,
-      name: "Fortis Memorial Research Institute, Gurgaon",
-      address: "Sector - 44, Opposite HUDA City Centre Gurgaon, 122002",
+      name: "Исследовательский институт Fortis Memorial, Гургаон",
+      address: "Sector - 44, напротив HUDA City Centre, Гургаон, 122002",
       image: "/image/hospital/gurugram.webp",
-      specialty: "Multi-Specialty Hospital",
+      specialty: "Многопрофильная больница",
     },
   ];
 
@@ -55,10 +55,10 @@ const SimilarHospitals = () => {
     <section className="similar-hospitals-section">
       <div className="sh-container">
         <div className="sh-header">
-          <h2 className="sh-title">Similar Hospitals</h2>
+          <h2 className="sh-title">Похожие больницы</h2>
           <p className="sh-subtitle">
-            Explore other Fortis hospitals offering world-class healthcare
-            services
+            Ознакомьтесь с другими больницами Fortis, предоставляющими
+            медицинские услуги мирового уровня
           </p>
         </div>
 
@@ -103,7 +103,7 @@ const SimilarHospitals = () => {
 
                     <div className="sh-actions">
                       <a
-                        href="https://wa.me/919211367800?text=Hi%20fortis-group-hospitals,%20I%20want%20more%20information%20about%20your%20hospital"
+                        href="https://wa.me/+918802552796?text=Hi%20fortis-group-hospitals,%20I%20want%20more%20information%20about%20your%20hospital"
                         className="sh-whatsapp-btn"
                         target="_blank"
                         rel="noopener noreferrer"

@@ -21,7 +21,7 @@ const Award = () => {
               <div className="HeroSection_statContent__Rb2S1">
                 <span className="HeroSection_statNumber__57KA2"></span>
                 <span className="HeroSection_statText__RAVBJ">
-                  Hospitals across Country
+                  Больницы по всей стране
                 </span>
               </div>
             </div>
@@ -40,7 +40,7 @@ const Award = () => {
               <div className="HeroSection_statContent__Rb2S1">
                 <span className="HeroSection_statNumber__57KA2"></span>
                 <span className="HeroSection_statText__RAVBJ">
-                  NABH Accredited
+                  Аккредитован NABH
                 </span>
               </div>
             </div>
@@ -60,7 +60,7 @@ const Award = () => {
             <div className="HeroSection_statContent__Rb2S1">
               <span className="HeroSection_statNumber__57KA2"></span>
               <span className="HeroSection_statText__RAVBJ">
-                JCI Accredited
+                Аккредитация JCI
               </span>
             </div>
           </div>
