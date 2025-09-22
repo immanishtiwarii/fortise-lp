@@ -24,7 +24,7 @@ const Header = () => {
 
           <div className="Header_rightContent__KFORT">
             <a
-              href="https://wa.me/919211367800?text=Hi%20fortis-group-hospitals%20Doctor,%20I%20need%20consultation%20for%20my%20Treatment"
+              href="https://wa.me/+918802552796?text=Hi%20fortis-group-hospitals%20Doctor,%20I%20need%20consultation%20for%20my%20Treatment"
               className="Header_whatsappLink__cNTJs"
               aria-label="Contact on WhatsApp"
               target="_blank"
@@ -41,7 +41,9 @@ const Header = () => {
                 style={{ color: "transparent" }}
                 src="/image/whatsapp-icon.svg"
               />
-              <span className="Header_phoneNumber__vryge">Whatsapp</span>
+              <span className="Header_phoneNumber__vryge">
+                Whatsapp +91 88025 52796
+              </span>
             </a>
 
             {/* <div className="Header_rightContent__KFORT">
