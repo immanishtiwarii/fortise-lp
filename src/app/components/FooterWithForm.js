@@ -123,8 +123,9 @@ const FooterWithForm = () => {
       <footer className="footer-section">
         <div className="footer-content">
           <h2 className="footer-heading">
-            Get in Touch with Our Medical Experts
+            Свяжитесь с нашими медицинскими экспертами
           </h2>
+
           <form className="footer-form" onSubmit={handleSubmit}>
             <input
               type="text"
@@ -189,7 +190,7 @@ const FooterWithForm = () => {
               className="footer-submit-btn"
               disabled={loading}
             >
-              {loading ? "Loading..." : "Get Free Opinion"}
+              {loading ? "Loading..." : "Получите бесплатное мнение"}
             </button>
           </form>
         </div>

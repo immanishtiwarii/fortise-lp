@@ -6,33 +6,33 @@ const HealthcareProcess = () => {
   const steps = [
     {
       id: 1,
-      title: "Explore & Match",
-      description: "Find the right hospital and specialist",
+      title: "Исследуйте и сопоставляйте",
+      description: "Найдите подходящую больницу и специалиста",
     },
     {
       id: 2,
-      title: "Doctor Opinion",
-      description: "Get expert medical opinion",
+      title: "Мнение врача",
+      description: "Получите экспертное медицинское заключение",
     },
     {
       id: 3,
-      title: "Cost Estimate",
-      description: "Receive transparent cost estimates",
+      title: "Оценка стоимости",
+      description: "Получите прозрачную смету расходов",
     },
     {
       id: 4,
-      title: "Medical Visa",
-      description: "Assistance with visa application",
+      title: "Медицинская виза",
+      description: "Помощь в оформлении визы",
     },
     {
       id: 5,
-      title: "On Field Assistance",
-      description: "Travel and accommodation support",
+      title: "О полевой помощи",
+      description: "Поддержка проезда и проживания",
     },
     {
       id: 6,
-      title: "Treat & Get Fit",
-      description: "Treatment with follow-up care",
+      title: "Лечись и приводи себя в форму",
+      description: "Лечение с последующим уходом",
     },
   ];
 
@@ -41,8 +41,8 @@ const HealthcareProcess = () => {
       <div className="hp-container">
         <div className="hp-header">
           <h2 className="hp-title">
-            Simple Process for Health Treatment at
-            <span className="hp-highlight"> Zero Cost & Zero Worries</span>
+            Простой процесс лечения в{" "}
+            <span className="hp-highlight">Нулевые затраты и ноль забот</span>
           </h2>
         </div>
 

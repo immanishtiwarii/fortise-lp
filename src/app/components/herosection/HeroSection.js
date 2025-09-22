@@ -15,7 +15,7 @@ const HeroSection = () => {
                     className="HeroSection_title__im1kR"
                     style={{ color: "#0CA854" }}
                   >
-                    Fortis Group of Hospitals
+                    Группа больниц Фортис
                   </h1>
                   <p
                     className="HeroSection_subtitle__rwTpg"

@@ -9,14 +9,17 @@ const Footer = () => {
       {/* CTA Section */}
       <div style={styles.ctaSection}>
         <div style={styles.ctaContainer}>
-          <h2 style={styles.ctaTitle}>Experience World-Class Healthcare</h2>
+          <h2 style={styles.ctaTitle}>
+            Ощутите медицинское обслуживание мирового уровня
+          </h2>
           <p style={styles.ctaText}>
-            Schedule a consultation with our expert medical team today and take
-            the first step towards better health.
+            Запишитесь на консультацию с нашей командой экспертов уже сегодня и
+            сделайте первый шаг к лучшему здоровью.
           </p>
+
           <ButtonPopup
             className="footerctaButton"
-            titile="Book an Appointment"
+            titile="Записаться на приём"
           />
           {/* <button style={styles.ctaButton}>Book an Appointment</button> */}
         </div>

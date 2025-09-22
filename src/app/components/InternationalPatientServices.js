@@ -6,9 +6,9 @@ const InternationalPatientServices = () => {
   const services = [
     {
       id: 1,
-      title: "Advance Bookings",
+      title: "Предварительное бронирование",
       description:
-        "Patients can share their medical reports online to discuss their requirements and get treatment plans and quotes.",
+        "Пациенты могут отправить свои медицинские отчеты онлайн, чтобы обсудить свои потребности и получить план лечения и предложения.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -21,9 +21,9 @@ const InternationalPatientServices = () => {
     },
     {
       id: 2,
-      title: "In Hospital Support",
+      title: "Поддержка в больнице",
       description:
-        "Patients can share their medical reports online to discuss their requirements and get treatment plans and quotes.",
+        "Пациенты могут отправить свои медицинские отчеты онлайн, чтобы обсудить свои потребности и получить план лечения и предложения.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -36,9 +36,9 @@ const InternationalPatientServices = () => {
     },
     {
       id: 3,
-      title: "Language Assistance",
+      title: "Языковая поддержка",
       description:
-        "Patients can share their medical reports online to discuss their requirements and get treatment plans and quotes.",
+        "Пациенты могут отправить свои медицинские отчеты онлайн, чтобы обсудить свои потребности и получить план лечения и предложения.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -51,9 +51,9 @@ const InternationalPatientServices = () => {
     },
     {
       id: 4,
-      title: "Post Surgery Care",
+      title: "Уход после операции",
       description:
-        "Patients can share their medical reports online to discuss their requirements and get treatment plans and quotes.",
+        "Пациенты могут отправить свои медицинские отчеты онлайн, чтобы обсудить свои потребности и получить план лечения и предложения.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -71,11 +71,11 @@ const InternationalPatientServices = () => {
       <div className="ips-container">
         <div className="ips-content">
           <div className="ips-text">
-            <h2 className="ips-title">International Patient Services</h2>
+            <h2 className="ips-title">Международные услуги для пациентов</h2>
             <p className="ips-subtitle">
-              We provide comprehensive support for our international patients,
-              ensuring a seamless healthcare experience from consultation to
-              recovery.
+              Мы обеспечиваем всестороннюю поддержку нашим международным
+              пациентам, обеспечивая бесперебойное медицинское обслуживание от
+              консультации до выздоровления.
             </p>
 
             <div className="ips-cards">
@@ -94,7 +94,7 @@ const InternationalPatientServices = () => {
 
             <ButtonPopup
               className="ips-cta-button"
-              titile="Get Free Opinion "
+              titile="Получите бесплатное мнение"
             />
             {/* 
             <button className="ips-cta-button">
